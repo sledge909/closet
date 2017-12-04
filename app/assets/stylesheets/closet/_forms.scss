@@ -1,0 +1,11 @@
+.bootstrap-switch-block {
+  .bootstrap-switch {
+    display: block;
+  }
+}
+
+.input-group.is-invalid {
+  ~ .invalid-feedback {
+    display: block;
+  }
+}

@@ -1,0 +1,11 @@
+body > header {
+  h1 {
+    margin-bottom: 0;
+  }
+}
+
+.overflow-ellipsis {
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

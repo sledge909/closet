@@ -1,0 +1,82 @@
+body {
+  &.devise {
+    background: $gray-200;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: image-url('office-bg.png');
+      background-size: 300px 300px;
+      opacity: 0.25;
+      z-index: -1;
+    }
+  }
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+
+  #header {
+    .extra-info {
+      padding-right: $spacer;
+    }
+
+    div:last-of-type {
+      .extra-info {
+        padding-right: 0;
+      }
+    }
+  }
+
+  #content-panel {
+    flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    > header {
+      border-bottom: 1px solid $gray-500;
+      box-shadow: 0 2px 0 rgba(0,0,0,0.03);
+      background: $white;
+
+      h1 {
+        margin-bottom: 0;
+      }
+    }
+
+    .main-wrapper {
+      flex: 1;
+      overflow-y: auto;
+
+      main {
+        padding: $spacer * 2;
+      }
+
+      aside#main-aside {
+        width: 30%;
+        background: $gray-200;
+        border-left: 1px solid $gray-500;
+      }
+
+      &.with-aside {
+        display: flex;
+        flex-direction: row;
+        overflow-y: hidden;
+
+        main {
+          overflow-y: auto;
+        }
+
+        aside#main-aside {
+          overflow-y: auto;
+        }
+      }
+    }
+  }
+}

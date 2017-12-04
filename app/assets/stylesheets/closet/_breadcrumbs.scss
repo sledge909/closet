@@ -1,0 +1,9 @@
+.breadcrumbs {
+  span {
+    padding: $spacer / 2;
+
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+}

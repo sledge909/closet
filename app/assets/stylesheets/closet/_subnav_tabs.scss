@@ -1,0 +1,18 @@
+#primary-tabs {
+  display: flex;
+
+  a {
+    margin: 0 $spacer / 2;
+    padding-bottom: $spacer / 3;
+    text-decoration: none;
+    border-bottom: 4px solid transparent;
+
+    &.active, &:hover {
+      border-bottom: 4px solid theme-color('primary');
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}

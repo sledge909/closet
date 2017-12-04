@@ -1,0 +1,74 @@
+#alerts {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: $spacer;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column-reverse;
+
+  .notification {
+    width: 400px;
+    border-radius: $alert-border-radius;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transform: translateX($spacer * 2);
+    transition: all 0.5s ease-in-out 0.75s;
+    margin-top: $spacer;
+
+    &.fade-in {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    &.fade-out {
+      transition-delay: 0s;
+      opacity: 0;
+      transform: translateX(500px);
+    }
+
+    .icon {
+      padding: 0 ($spacer * 1.5);
+    }
+
+    .close {
+      padding: 0 $spacer;
+    }
+
+    .icon, .close {
+      text-align: center;
+    }
+
+    .detail {
+      flex: 1;
+      padding: $spacer 0;
+    }
+
+    .close {
+      color: inherit;
+      opacity: 0.85;
+    }
+
+    ul {
+      opacity: 0.75;
+      font-size: 0.8rem;
+      margin-bottom: 0;
+    }
+
+    &.notification-danger {
+      background: theme-color("danger");
+      color: $white;
+    }
+
+    &.notification-notice {
+      background: theme-color("success");
+      color: $white;
+    }
+
+    &.notification-alert {
+      background: theme-color("warning");
+      color: $white;
+    }
+  }
+}

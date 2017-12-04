@@ -1,0 +1,57 @@
+nav#main-nav {
+  background: theme-color("dark");
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  width: ($font-size-base * 2) + ($spacer * 2);
+  justify-content: space-between;
+
+  ul {
+    margin: 0;
+  }
+
+  .user-icon {
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: $border-radius;
+    }
+  }
+
+  a {
+    display: block;
+    padding: $spacer;
+    text-decoration: none;
+    color: $white;
+    transition: background-color 0.25s ease-in-out;
+    white-space: nowrap;
+
+    i {
+      font-size: $font-size-base * 1.5;
+      width: $font-size-base * 2;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    span {
+      padding-left: ($spacer / 3) * 2;
+      padding-right: ($spacer / 3) * 2;
+      vertical-align: middle;
+      display: none;
+    }
+
+    &:hover, &.active {
+      background: lighten(theme-color('dark'), 25%);
+    }
+  }
+
+  &.open {
+    width: calc(#{($font-size-base * 2) + ($spacer * 2)} + 120px);
+
+    a {
+      span {
+        display: block;
+      }
+    }
+  }
+}

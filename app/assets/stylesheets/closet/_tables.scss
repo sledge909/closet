@@ -1,0 +1,68 @@
+thead {
+  th.created-at {
+    width: 15rem;
+  }
+}
+
+table.subtotals {
+  th {
+    width: 60%;
+  }
+}
+
+.table-results {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: $spacer;
+  background: $white;
+  border: $table-border-width solid $table-border-color;
+  border-radius: $border-radius;
+  border-collapse: separate;
+  border-spacing: 0;
+
+  thead {
+    th, td {
+      vertical-align: bottom;
+      padding: $table-cell-padding;
+      border-bottom: $table-border-width solid $table-border-color;
+      background: $table-head-bg;
+
+      &:first-child {
+        border-top-left-radius: $border-radius;
+      }
+
+      &:last-child {
+        border-top-right-radius: $border-radius;
+      }
+    }
+  }
+
+  tbody {
+    th, td {
+      padding: $table-cell-padding;
+      vertical-align: middle;
+      border-top: $table-border-width solid $table-border-color;
+    }
+
+    tr {
+      &:first-child {
+        th, td {
+          border-top: none;
+        }
+      }
+
+      &:last-child {
+        th, td {
+          &:first-child {
+            border-bottom-left-radius: $border-radius;
+          }
+
+          &:last-child {
+            border-bottom-right-radius: $border-radius;
+          }
+        }
+      }
+    }
+  }
+
+}
