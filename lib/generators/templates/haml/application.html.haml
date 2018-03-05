@@ -1,0 +1,9 @@
+!!!
+%html
+  %head
+    = render 'head'
+  %body
+    = render 'alerts'
+    = render 'navigation'
+    #content-panel= render 'default_content'
+    = yield :modals

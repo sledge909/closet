@@ -1,0 +1,5 @@
+#alerts{data: { turbolinks_permanent: true }}
+.alerts{hidden: true}
+  - flash.each do |type, msg|
+    = render 'application/notifications/flash', type: type, message: msg
+  = yield :alerts

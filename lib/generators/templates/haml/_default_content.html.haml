@@ -1,0 +1,23 @@
+- breadcrumbs = render_breadcrumbs(tag: :span, separator: '/')
+- if content_for? :header or breadcrumbs or content_for? :primary_tabs
+  %header.container-fluid
+    #header.py-3.px-3.row.align-items-center
+      .col
+        - if breadcrumbs
+          .breadcrumbs= breadcrumbs
+        = yield :header
+      - if content_for? :extra_info
+        .col-sm-auto
+          .extra-info= yield :extra_info
+      - if content_for? :actions
+        .col-sm-auto
+          .actions= yield :actions
+    - if content_for? :primary_tabs
+      .row.px-3
+        %nav#primary-tabs.col
+          .nav= yield :primary_tabs
+.main-wrapper{class: [content_for?(:main_aside) && 'with-aside']}
+  %main.container-fluid
+    = yield
+  - if content_for? :main_aside
+    %aside#main-aside= yield :main_aside
