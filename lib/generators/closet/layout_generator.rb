@@ -54,5 +54,12 @@ module Closet
       copy_file 'haml/mailer.text.haml',
                 'app/views/layouts/mailer.text.haml'
     end
+
+    def rails
+      copy_file 'rails/field_error_proc.rb',
+                'config/initializers/field_error_proc.rb'
+      copy_file 'rails/closet_helper.rb',
+                'app/helpers/closet_helper.rb'
+    end
   end
 end
