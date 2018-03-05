@@ -20,6 +20,14 @@ module Closet
     end
 
     def javascript
+      copy_file 'javascripts/application.js',
+                'app/assets/javascripts/application.js'
+      copy_file '.keep',
+                'app/assets/javascripts/components/.keep'
+      copy_file '.keep',
+                'app/assets/javascripts/templates/.keep'
+      copy_file 'javascripts/array.js.coffee',
+                'app/assets/javascripts/prototypes/array.js.coffee'
     end
 
     def layout
