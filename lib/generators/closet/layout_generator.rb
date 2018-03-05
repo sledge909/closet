@@ -30,11 +30,14 @@ module Closet
                 'app/assets/javascripts/prototypes/array.js.coffee'
     end
 
-    def layout
+    def notifications
       copy_file 'haml/notifications/_danger.html.haml',
                 'app/views/application/notifications/_danger.html.haml'
       copy_file 'haml/notifications/_flash.html.haml',
                 'app/views/application/notifications/_flash.html.haml'
+    end
+
+    def partials
       copy_file 'haml/_alerts.html.haml',
                 'app/views/application/_alerts.html.haml'
       copy_file 'haml/_default_content.html.haml',
@@ -45,6 +48,9 @@ module Closet
                 'app/views/application/_head.html.haml'
       copy_file 'haml/_navigation.html.haml',
                 'app/views/application/_navigation.html.haml'
+    end
+
+    def layout
       copy_file 'haml/application.html.haml',
                 'app/views/layouts/application.html.haml'
       copy_file 'haml/modal.html.haml',
