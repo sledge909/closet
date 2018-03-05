@@ -1,0 +1,5 @@
+.notification{class: "notification-#{type}", data: { clear: true } }
+  .icon= fa_icon "#{t("flash.#{type}.icon")} 2x"
+  .detail
+    %p.mb-0= message
+  .close= fa_icon 'times'

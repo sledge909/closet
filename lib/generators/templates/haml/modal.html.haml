@@ -1,0 +1,15 @@
+.modal.fade#remoteModal{ tabindex: -1, role: 'dialog',
+aria: { labelledby: 'remoteModalLabel', hidden: true } }
+  .modal-dialog.modal-xxl{ role: 'document' }
+    .modal-content
+      .modal-header
+        = yield :header
+        %button.close{ type: 'button', data: { dismiss: 'modal' }, aria: { label: 'Close' } }
+          %span{ aria: { hidden: 'true' } } &times;
+      .modal-body
+        = yield
+        - if content_for? :main_aside
+          %aside#main-aside= yield :main_aside
+      .modal-footer
+        - if content_for? :actions
+          .actions= yield :actions

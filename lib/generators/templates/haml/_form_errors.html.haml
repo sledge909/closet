@@ -1,0 +1,8 @@
+.row
+  .col
+    .alert.alert-danger
+      %h4.alert-heading Could not save this #{object.class.name.humanize} because:
+
+      %ul.list-unstyled.mb-0
+        - object.errors.full_messages.each do |msg|
+          %li= msg

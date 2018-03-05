@@ -1,0 +1,8 @@
+.notification.notification-danger{data: { form: true } }
+  .icon= fa_icon 'exclamation 2x'
+  .detail
+    %h4 Oops! Something went wrong!
+    %ul.list-unstyled.mb-0
+      - object.errors.full_messages.each do |msg|
+        %li= msg
+  .close= fa_icon 'times'

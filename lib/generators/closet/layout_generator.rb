@@ -31,7 +31,28 @@ module Closet
     end
 
     def layout
-      puts "source root #{source_paths}"
+      copy_file 'haml/notifications/_danger.html.haml',
+                'app/views/application/notifications/_danger.html.haml'
+      copy_file 'haml/notifications/_flash.html.haml',
+                'app/views/application/notifications/_flash.html.haml'
+      copy_file 'haml/_alerts.html.haml',
+                'app/views/application/_alerts.html.haml'
+      copy_file 'haml/_default_content.html.haml',
+                'app/views/application/_default_content.html.haml'
+      copy_file 'haml/_form_errors.html.haml',
+                'app/views/application/_form_errors.html.haml'
+      copy_file 'haml/_head.html.haml',
+                'app/views/application/_head.html.haml'
+      copy_file 'haml/_navigation.html.haml',
+                'app/views/application/_navigation.html.haml'
+      copy_file 'haml/application.html.haml',
+                'app/views/layouts/application.html.haml'
+      copy_file 'haml/modal.html.haml',
+                'app/views/layouts/modal.html.haml'
+      copy_file 'haml/mailer.html.haml',
+                'app/views/layouts/mailer.html.haml'
+      copy_file 'haml/mailer.text.haml',
+                'app/views/layouts/mailer.text.haml'
     end
   end
 end
