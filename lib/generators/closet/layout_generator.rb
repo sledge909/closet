@@ -15,6 +15,8 @@ module Closet
                 'app/assets/stylesheets/application.scss'
       copy_file 'stylesheets/_variables.scss',
                 'app/assets/stylesheets/_variables.scss'
+      copy_file 'stylesheets/_colours.scss',
+                'app/assets/stylesheets/_colours.scss'
       copy_file 'stylesheets/_base.scss',
                 'app/assets/stylesheets/components/_base.scss'
     end
