@@ -21,12 +21,13 @@ Gem::Specification.new do |s|
                 'README.md']
 
   s.add_dependency 'bootstrap', '~> 4.0.0'
-  s.add_dependency 'breadcrumbs_on_rails'
   s.add_dependency 'coffee-rails', '~> 4.2'
-  s.add_dependency 'font-awesome-rails'
-  s.add_dependency 'haml-rails'
-  s.add_dependency 'jquery-rails'
   s.add_dependency 'rails', '>= 5.1.4'
+  s.add_dependency 'breadcrumbs_on_rails'
+  s.add_dependency 'js-routes'
+  s.add_dependency 'font-awesome-rails'
+  s.add_dependency 'jquery-rails'
+  s.add_dependency 'haml-rails'
   s.add_dependency 'sass-rails'
   s.add_development_dependency 'rubocop'
 end
