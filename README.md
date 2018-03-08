@@ -29,18 +29,11 @@ To set up the bootstrap common files run:
 $ rails generator closet:layout
 ```
 
-For the generated layout to work properly the following gems must be added to
+For the generated layout to work properly the following gem must be added to
 the app `Gemfile`:
 
 ```
-gem 'breadcrumbs_on_rails'
-gem 'js-routes'
-gem 'font-awesome-rails'
 gem 'page_title_helper', github: 'lwe/page_title_helper'
-gem 'email_spec'
-gem 'jquery-rails'
-gem 'haml-rails'
-gem 'sass-rails'
 ```
 
 And run:
