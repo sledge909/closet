@@ -6,9 +6,13 @@ $(document).on 'turbolinks:load', ->
   $("##{anchor}").modal('show') if anchor.length
 
 $(document).on 'ajax:beforeSend', '[data-modal]', (e, xhr, settings) ->
+  if ((typeof Rails) == 'object')
+    [xhr, options] = e.detail
   xhr.setRequestHeader 'X-Modal', 'true'
 
 $(document).on 'ajax:success', '[data-modal]', (e, data, status, xhr) ->
+  if ((typeof Rails) == 'object')
+    [data, status, xhr] = e.detail
   $modal = $(xhr.responseText)
   $('body').append($modal)
   $modal.modal('show')
