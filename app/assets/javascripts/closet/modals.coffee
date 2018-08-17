@@ -3,7 +3,8 @@ $(document).on 'shown.bs.modal', '[data-sub-modal]', ->
 
 $(document).on 'turbolinks:load', ->
   anchor = window.location.hash.substr(1)
-  $("##{anchor}").modal('show') if anchor.length
+  if anchor.length && document.querySelectorAll("##{anchor}.modal").length
+    $("##{anchor}").modal('show')
 
 $(document).on 'ajax:beforeSend', '[data-modal]', (e, xhr, settings) ->
   if ((typeof Rails) == 'object')
