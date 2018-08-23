@@ -15,6 +15,9 @@ $(document).on 'ajax:success', '[data-modal]', (e, data, status, xhr) ->
   if ((typeof Rails) == 'object')
     [data, status, xhr] = e.detail
   $modal = $(xhr.responseText)
+  FontAwesome.dom.i2svg({
+    node: $modal[0]
+  })
   $('body').append($modal)
   $modal.modal('show')
   $modal.on 'hidden.bs.modal', (event) ->
